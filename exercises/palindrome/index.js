@@ -7,6 +7,28 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+    //1st sol
+    // let reversed = '';
+    // for(let char of str){
+    //     reversed = char + reversed;
+    // }
+    // return reversed===str;
+
+    // 2nd sol
+    return str.split('').every((char, i)=>char===str[str.length - i - 1])
+}
+
+//Java sol
+// class Main {
+//     public static void main(String[] args) {
+//         String str = "abba";
+//         String r = "";
+//         for (char c: str.toCharArray()){
+//             r = c + r;
+//         }
+//         System.out.println(r.equals(str));
+//     }
+// }
 
 module.exports = palindrome;
